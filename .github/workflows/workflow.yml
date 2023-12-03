@@ -57,7 +57,7 @@ jobs:
           chmod 600 id_rsa
       - name: Run deploy script
         run: |
-          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./deployment/bin/deploy.sh ${{ secrets.SSH_CONNECTION_STAGING }}:/home/stanko/deploy.sh
-          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./id_rsa ${{ secrets.SSH_CONNECTION_STAGING }}:/home/stanko/.ssh/id_rsa
-          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION_STAGING }} "chown stanko:stanko /home/stanko/deploy.sh && chmod +x /home/stanko/deploy.sh"
-          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION_STAGING }} "/home/stanko/deploy.sh ${{ secrets.MYSQL_PASSWORD }}"
+          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./deployment/bin/deploy.sh ${{ secrets.SSH_CONNECTION_TESTING }}:/home/stanko/deploy.sh
+          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./id_rsa ${{ secrets.SSH_CONNECTION_TESTING }}:/home/stanko/.ssh/id_rsa
+          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION_TESTING }} "chown stanko:stanko /home/stanko/deploy.sh && chmod +x /home/stanko/deploy.sh"
+          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION_TESTING }} "/home/stanko/deploy.sh ${{ secrets.MYSQL_PASSWORD }}"
