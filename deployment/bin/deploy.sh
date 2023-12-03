@@ -26,7 +26,7 @@ npm run build
 
 cd $PROJECT_DIR"/api"
 
-composer install --no-interaction --optimize-autoloader --no-dev
+composer install --no-interaction --optimize-autoloader --no-dev --ignore-platform-reqs
 
 # initialize .env if does not exist (first deploy)
 if [ ! -f $PROJECT_DIR"/api/.env" ]; then
