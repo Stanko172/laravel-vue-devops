@@ -4,7 +4,7 @@ set -e
 
 MYSQL_PASSWORD=$1
 
-PROJECT_DIR="/var/www/html/posts"
+PROJECT_DIR="/var/www/html/laravel-vue-devops"
 
 # make dir if not exists (first deploy)
 mkdir -p $PROJECT_DIR
@@ -15,9 +15,9 @@ git config --global --add safe.directory $PROJECT_DIR
 
 # the project has not been cloned yet (first deploy)
 if [ ! -d $PROJECT_DIR"/.git" ]; then
-  GIT_SSH_COMMAND='ssh -i /home/martin/.ssh/id_rsa -o IdentitiesOnly=yes' git clone git@github.com:mmartinjoo/devops-with-laravel-sample.git .
+  GIT_SSH_COMMAND='ssh -i /home/stanko/.ssh/id_rsa -o IdentitiesOnly=yes' git clone https://github.com/Stanko172/laravel-vue-devops.git .
 else
-  GIT_SSH_COMMAND='ssh -i /home/martin/.ssh/id_rsa -o IdentitiesOnly=yes' git pull
+  GIT_SSH_COMMAND='ssh -i /home/stanko/.ssh/id_rsa -o IdentitiesOnly=yes' git pull
 fi
 
 cd $PROJECT_DIR"/frontend"
@@ -49,10 +49,6 @@ php artisan route:cache
 php artisan view:cache
 
 php artisan up
-
-sudo cp $PROJECT_DIR"/deployment/config/php-fpm/www.conf" /etc/php/8.1/fpm/pool.d/www.conf
-sudo cp $PROJECT_DIR"/deployment/config/php-fpm/php.ini" /etc/php/8.1/fpm/conf.d/php.ini
-sudo systemctl restart php8.1-fpm.service
 
 sudo cp $PROJECT_DIR"/deployment/config/nginx.conf" /etc/nginx/nginx.conf
 # test the config so if it's not valid we don't try to reload it
