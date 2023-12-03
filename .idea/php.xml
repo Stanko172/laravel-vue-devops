@@ -10,6 +10,16 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpCSFixer">
+    <phpcsfixer_settings>
+      <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/api/vendor/bin/php-cs-fixer" />
+    </phpcsfixer_settings>
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/api/vendor/bin/phpcbf" tool_path="$PROJECT_DIR$/api/vendor/bin/phpcs" />
+    </phpcs_settings>
+  </component>
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/api/vendor/graham-campbell/result-type" />
@@ -127,6 +137,26 @@
       <path value="$PROJECT_DIR$/api/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/api/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/api/vendor/composer" />
+      <path value="$PROJECT_DIR$/api/vendor/cmgmyr/phploc" />
+      <path value="$PROJECT_DIR$/api/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/api/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/api/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/api/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/api/vendor/nunomaduro/phpinsights" />
+      <path value="$PROJECT_DIR$/api/vendor/league/container" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/api/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/api/vendor/php-parallel-lint/php-parallel-lint" />
+      <path value="$PROJECT_DIR$/api/vendor/justinrainbow/json-schema" />
     </include_path>
   </component>
   <component name="PhpStan">

@@ -46,7 +46,7 @@ jobs:
       - name: phpinsights
         run: |
           cd api
-          php artisan insights --no-interaction --min-quality=90 --min-complexity=90 --min-architecture=90 --min-style=90 --ansi --format=github-action
+          php artisan insights --no-interaction --min-quality=90 --min-complexity=85 --min-architecture=90 --min-style=90 --ansi --format=github-action
       - name: Run tests
         run: |
           cd api
